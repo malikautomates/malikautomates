@@ -1,99 +1,87 @@
-# Muhammed Abdulmalik (Malik)
-### I build production agentic AI systems that automate real business processes end-to-end — voice, chat, and workflow — with evaluation and observability built in.
+# Hi, I'm Muhammed Abdulmalik (Malik) 👋
 
-**Based in:** Winnipeg, Manitoba, Canada  
-**Reach me:** [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com) | [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267) | [@malikautomates_](https://instagram.com/malikautomates_)
+### I build production agentic AI systems — voice, chat, and workflow — that automate real business processes end-to-end. I got here by spending 3+ years as the person who fixes things when they break.
+
+**Based in:** Winnipeg, Manitoba, Canada
+**Reach me:** [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com) · [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267) · [@malikautomates_](https://instagram.com/malikautomates_)
 
 ---
 
 ## What I ship
-I specialize in **AI automation at scale** — taking manual business workflows (support intake, lead qualification, invoice processing, meeting summarization) and replacing them with durable, evaluated, observable agentic systems. Not proof-of-concepts. Not notebook experiments. **Production systems that run live for real use cases.**
 
-**Current production stack:**
-- **Agents & Orchestration:** LangGraph, Claude Agent SDK, Vapi voice agents, n8n
-- **LLMs:** Anthropic Claude (primary), OpenAI GPT-4, local models via Ollama
-- **RAG & Retrieval:** pgvector/Supabase, Qdrant, hybrid search, RAGAS evaluation
-- **Serving & Deployment:** FastAPI, Docker, Coolify self-hosted VPS, AWS/GCP cloud
-- **Observability:** Langfuse, LangSmith, custom cost/latency dashboards
-- **Backend:** Python, Node.js, SQL (PostgreSQL), REST APIs, webhooks, OAuth
+I take manual business workflows — support intake, IT onboarding, call handling — and replace them with agentic systems that run live, not notebook demos. My current production work:
 
----
+### 🎫 Voice/Text-to-Ticket Automation — n8n · OpenAI Whisper · Anthropic Claude · Jira
+Running in production at Norshel Incorporated. A support request comes in by voice or text, gets transcribed, classified, and filed as a fully detailed Jira ticket — end-to-end in under 60 seconds. Previously a 10–15 minute manual intake.
 
-## The 10 Skills That Get Hired (2026)
-Track my journey across these:
+### ⚙️ PowerShell New-Hire Onboarding Automation
+Provisions new staff across Active Directory, Microsoft 365 licensing, MFA, and VPN access from a single CSV. 60+ minutes of manual setup → under 5 minutes, zero configuration drift. Built first at Transmission Company of Nigeria; still the pattern I reuse everywhere.
 
-| Skill | Status | Where |
-|-------|--------|-------|
-| **1. Python fluency + async/type hints** | ✅ Shipping | Every project |
-| **2. Multi-provider LLM API mastery** | ✅ Shipping | `llm-toolkit` (Week 3) |
-| **3. Prompt engineering as system design** | ✅ Live | HVAC receptionist, Vortex FX |
-| **4. RAG architecture & retrieval metrics** | 🚀 Building | `hvac-knowledge-agent` (Week 10) |
-| **5. Agent orchestration (LangGraph/MCP)** | 🚀 Building | Flagship multi-agent (Week 15) |
-| **6. Evaluation & observability** | ✅ Deployed | n8n workflows, production dashboards |
-| **7. End-to-end business process automation** | ✅ Live | Voice-to-ticket (60 sec), onboarding scripts (5 min) |
-| **8. LLMOps: FastAPI, Docker, CI/CD, deploy** | 🚀 Building | Project 4 (Weeks 16–20) |
-| **9. Cost & risk awareness** | ✅ Implemented | Prompt caching, token budgeting, guardrails |
-| **10. Fine-tuning literacy (LoRA/QLoRA)** | 🚀 Building | Week 20 hands-on |
+### 📈 Vortex FX
+Multi-factor forex signal engine with an AI chatbot ("Sheyla") for signal interpretation and risk questions, built on real-time market data aggregation and technical analysis.
+
+### ☎️ Vortex AI SaaS — AI Receptionist
+Inbound call intake with Whisper transcription, Claude-based intent classification and routing, and automatic Jira ticket creation — the voice-to-ticket pattern above, packaged as a product.
+
+### 🌐 norshelinc.ca
+Designed, deployed, and maintain this org's public site end-to-end — domain, DNS, hosting, content.
 
 ---
 
-## What's live right now
+## Where the instinct comes from
 
-### **Vortex FX** — Multi-factor forex signal engine with AI chatbot "Sheyla"
-- Real-time market data aggregation + technical analysis
-- AI chatbot (Claude) for signal interpretation and risk questions
-- Production-grade deployment with cost optimization
+I didn't start in AI. I started on a help desk, and that's still how I think: notice the manual bottleneck, script it, measure whether it actually got faster.
 
-### **Vortex AI SaaS** — AI Receptionist platform
-- Inbound call intake with voice-to-text transcription (OpenAI Whisper)
-- Intent classification + routing (Claude)
-- Automatic ticket creation in Jira (<60 seconds end-to-end)
-- Previously: 10–15 min manual intake → now: <60 sec automated
+- **IT Support Specialist — Norshel Incorporated** (Winnipeg, MB, Mar 2025–Present) — Tier 1 support across Windows 10/11 and M365; M365 user/mailbox/MFA administration and onboarding-offboarding.
+- **Technical Support Specialist (Part-Time) — Western Drug Distribution Company** (Winnipeg, MB, Aug 2023–Feb 2025) — First point of contact for escalated hardware and M365 incidents across warehouse operations; resolved 95% of escalations independently, cut operational downtime 40%.
+- **Technical Support Specialist and Help Desk Technician — Transmission Company of Nigeria** (Abuja, Nigeria, Jul 2020–Feb 2023) — Tier 1-2 support to 50+ staff, ServiceNow queue at 98% SLA adherence. Where the onboarding automation above started.
 
-### **n8n Automation Workflows** (self-hosted on Coolify)
-- Voice/text-to-ticket automation (Vapi + Whisper + Claude + Jira)
-- PowerShell new-hire onboarding (60+ min → <5 min, zero drift)
-- WhatsApp Business + Meta Graph API integrations
-- Webhook orchestration across Microsoft 365, Supabase, CRM platforms
-
-### **norshelinc.ca** — Full-stack website redesign & deployment
-- Domain, DNS, hosting, content management
-- Professional presence for families, partner agencies, prospective clients
+**Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence · Post-Degree Diploma, Network and Systems Administration / Network Security (University of Winnipeg).
 
 ---
 
-## Currently shipping (Project VORTEX ASCENT 2.0)
+## Current stack
 
-Over **6 months (24 weeks)**, I'm building a certified, portfolio-proven, interview-ready AI Automation Engineer with **5 production-quality GitHub projects**, **4 free certs + AWS AIF-C01**, and all 10 market skills at job-ready.
+- **Agents & Orchestration:** n8n, Vapi voice agents, Claude Agent SDK, LangGraph *(building)*
+- **LLMs:** Anthropic Claude (primary), OpenAI APIs
+- **IT & Identity — where the AI work is grounded:** Microsoft 365, Entra ID/Azure AD, Active Directory, Group Policy, MFA, Windows Server 2016–2025, Linux server administration, ServiceNow, Jira
+- **Scripting & Automation:** PowerShell, Python, Bash, REST APIs, webhooks
+- **Networking & Security:** TCP/IP, DNS, DHCP, VLAN, VPN, firewalls, Cisco switches/routers
+- **Other:** Git/GitHub, basic HTML/CSS, Model Context Protocol (MCP)
 
-**The ships (timeline):**
-- **Week 3:** `llm-toolkit` — multi-provider LLM wrapper with retries, cost tracking, structured outputs, tests
-- **Week 6:** `prompt-eval-lab` — evaluation harness proving prompt quality with golden datasets + RAGAS
-- **Week 10:** `hvac-knowledge-agent` — RAG system over HVAC docs, live demo, eval metrics
-- **Week 15:** `business-ops-agent` — flagship multi-agent LangGraph system with MCP, tracing, live demo
-- **Week 20:** Productionized flagship — Docker, CI/CD with eval gates, public deploy, dashboards
+---
 
-**Why this matters:** Each project answers a hiring question. Together they prove I can design, build, deploy, and operate production AI systems — not notebook experiments.
+## Building (Project Vortex Ascent)
+
+| Focus | Status | Where |
+|---|---|---|
+| Multi-provider LLM API mastery | 🚀 Building | `llm-toolkit` |
+| Prompt engineering as system design | ✅ Live | Vortex FX, AI Receptionist |
+| RAG architecture & retrieval metrics | 🚀 Building | `hvac-knowledge-agent` |
+| Agent orchestration (LangGraph/MCP) | 🚀 Building | `business-ops-agent` (flagship) |
+| Evaluation & observability | 🚀 Building | eval harness + RAGAS |
+| LLMOps: Docker, CI/CD, deploy | 🚀 Building | Productionized flagship |
+
+Each one answers a specific hiring question rather than padding a skills list.
+
+---
+
+## Certifications
+
+Cisco CCNA · ITIL Foundation · CompTIA Security+ *(in progress)* · Anthropic: Claude Code in Action, Building with the Claude API, Claude with Google Cloud's Vertex AI, AI Fluency: Framework and Foundations, Claude 101
 
 ---
 
 ## The positioning
 
-I'm not a data scientist. I'm not a prompt engineer. I'm an **AI systems engineer**: I take business problems, design durable agentic workflows, instrument them for observability, ship them to production, and keep them running. My 3+ years in IT support + network security + automation gave me the ops mindset; my hands-on n8n/Vapi/Claude work gave me the AI chops; now I'm closing the formal gaps (RAG depth, eval rigor, LLMOps discipline).
-
-The market pays **$90K–$160K+ CAD** for people who can do this. The gap between "I can prompt-engineer" and "I can ship production agentic systems" is where the leverage lives.
+I'm not a data scientist and I'm not just a prompt writer. I take business problems, build durable agentic workflows around them, and keep them running in production — the ops discipline came from 3+ years in IT support and network security; the AI chops came from building n8n, Vapi, Claude systems, RAG, evaluation rigor, LLMOps 
 
 ---
 
 ## Let's connect
 
-- 🏗️ **Portfolio:** [vortex-ai.ca](https://vortex-ai.ca)
-- 📺 **Build-in-public:** [@malikautomates_](https://instagram.com/malikautomates_) on Instagram, TikTok, X
-- 💼 **LinkedIn:** [linkedin.com/in/muhammed-abdulmalik](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267)
-- 📧 **Email:** [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com)
+- 📧 [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267)
+- 📺 [@malikautomates_](https://instagram.com/malikautomates_) — build-in-public on Instagram, TikTok, X
 
-Hiring for AI Engineer roles? Let's talk. Already shipping agentic systems? I'd love to see your stack.
-
----
-
-**Roadmap v2.0 · Merged from Claude, Gemini, ChatGPT & Kimi frameworks · Market-verified against live 2026 hiring data · Updated July 2026**
+Hiring for AI Engineer or support-engineering roles? Already running agentic systems in production? I'd like to see what you're building.
