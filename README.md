@@ -28,6 +28,35 @@ Lead the end-to-end build and ongoing management of the org's public site — do
 
 ---
 
+## Public labs & portfolio tools
+
+Three repositories, written the same way as the production work above: the
+design decision behind each choice, a real test suite or regenerated
+verification evidence, and — where something didn't work cleanly the first
+time — the limitation, named directly, not smoothed over.
+
+### 🐍 [python-projects](https://github.com/malikautomates/python-projects)
+Standalone Python automation tools, each with a pytest suite and a README
+walkthrough built from real, regenerable screenshots — not mockups.
+Currently: a rule-based helpdesk ticket triage CLI (categorization,
+priority, SLA-breach detection) and an M365 user lifecycle tool
+(onboarding/offboarding via Microsoft Graph, app-only auth, a dry-run mode
+that needs zero credentials).
+
+### 🪟 [windows-server-2025-ad-lab](https://github.com/malikautomates/windows-server-2025-ad-lab)
+A Windows Server 2025 Active Directory lab across 13 modules — domain
+controller deployment, OU design and delegation, Group Policy, DHCP/DNS
+administration, bulk user provisioning, and a helpdesk ticket runbook —
+each with design rationale and verification evidence.
+
+### 📧 [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab)
+A full Microsoft 365 tenant administered end to end across 13 labs:
+identity and licensing, least-privilege delegation with PIM, Conditional
+Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk
+runbook resolving a real account-lockout case.
+
+---
+
 ## Where the instinct comes from
 
 I didn't start in AI. I started on a help desk, and that's still how I think: notice the manual bottleneck, script it, measure whether it actually got faster.
@@ -54,7 +83,7 @@ I didn't start in AI. I started on a help desk, and that's still how I think: no
 
 ## Shipped, not just building
 
-CI/CD runs across three active repositories on every push and PR: linting, test suites (63 tests on the flagship Next.js app, 21 on webhook-security-critical paths, 8 on auth primitives), and build verification. `norshelinc-portal` — the FastAPI backend behind norshelinc.ca — has a genuine hard gate: the deploy job is dependency-blocked on a verify job covering ruff linting, pytest coverage of bcrypt hashing, JWT round-trips, and rejection of tampered/expired/malformed tokens. Nothing ships there unless every check passes.
+CI/CD runs across two active repositories on every push and PR: linting, test suites (63 tests on the flagship Next.js app, 21 on webhook-security-critical paths, 8 on auth primitives), and build verification. `norshelinc-portal` — the FastAPI backend behind norshelinc.ca — has a genuine hard gate: the deploy job is dependency-blocked on a verify job covering ruff linting, pytest coverage of bcrypt hashing, JWT round-trips, and rejection of tampered/expired/malformed tokens. Nothing ships there unless every check passes.
 
 ## Building (Project Vortex Ascent)
 
@@ -63,7 +92,7 @@ CI/CD runs across three active repositories on every push and PR: linting, test 
 | Multi-provider LLM API mastery | 🚀 Building | `llm-toolkit` |
 | Prompt engineering as system design | ✅ Live | Vortex FX, AI Receptionist |
 | RAG architecture & retrieval | ✅ Shipped | Vortex FX |
-| CI/CD & deployment gates | ✅ Shipped | 3 active repos |
+| CI/CD & deployment gates | ✅ Shipped | 2 active repos |
 | Agent orchestration (LangGraph/MCP) | 🚀 Building | `business-ops-agent` (flagship) |
 | Evaluation & observability | 🚀 Building | eval harness + RAGAS |
 
