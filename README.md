@@ -121,11 +121,11 @@ coverage, and an app-startup check. Nothing ships there unless every check passe
 
 | Focus | Status | Where |
 |---|---|---|
-| Multi-provider LLM API mastery | In progress | `llm-toolkit` |
+| Multi-provider LLM API mastery | In progress | Vortex FX, AI Receptionist (Claude, OpenAI, ElevenLabs) |
 | Prompt engineering as system design | Applied | Vortex FX, AI Receptionist |
 | RAG architecture and retrieval | Shipped | Vortex FX |
 | CI/CD and deployment gates | Shipped | 4 repos (2 public) |
-| Agent orchestration (LangGraph/MCP) | In progress | `business-ops-agent` |
+| Agent orchestration (LangGraph/MCP) | In progress | Local prototypes, not yet published |
 | Evaluation and observability | In progress | Eval harness, RAGAS |
 
 ---
