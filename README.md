@@ -74,8 +74,8 @@ check) passes.
 
 | Repository | Summary |
 |---|---|
-| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite and a README walkthrough built from real, regenerable screenshots. Currently: a rule-based helpdesk ticket triage CLI and an M365 user lifecycle tool built on Microsoft Graph (app-only auth, a dry-run mode that needs zero credentials). |
-| [windows-server-2025-ad-lab](https://github.com/malikautomates/windows-server-2025-ad-lab) | A Windows Server 2025 Active Directory lab across 13 modules — domain controller deployment, OU design and delegation, Group Policy, DHCP/DNS administration, bulk provisioning, and a helpdesk ticket runbook — each with design rationale and verification evidence. |
+| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller — 12 OUs, AGDLP groups, 15 accounts, permissioned shares — surviving two restarts with no stored credential; a second command onboards a new starter across Active Directory and Microsoft 365. Seven labs from bare VM to first sign-in, with CI on every push. |
+| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite run in CI and a README walkthrough built from real, regenerable screenshots. Currently: a rule-based helpdesk ticket triage CLI. |
 | [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab) | A Microsoft 365 tenant administered end to end across 13 labs: identity and licensing, least-privilege delegation with PIM, Conditional Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk runbook resolving a real account-lockout case. |
 
 Each repository is written as operational documentation rather than a tutorial: the
@@ -101,12 +101,19 @@ named directly rather than smoothed over.
 
 ## Engineering Practices
 
-CI/CD runs on every push and PR across two active repositories: linting, test suites
-(63 tests on the flagship Next.js app, 21 on webhook-security-critical paths, 8 on
-auth primitives), and build verification. `norshelinc-portal` — the FastAPI backend
-behind norshelinc.ca — enforces a hard deploy gate: the deploy job is
-dependency-blocked on a verify job covering linting, auth test coverage, and an
-app-startup check. Nothing ships there unless every check passes.
+CI runs on every push and PR. Two pipelines are public and can be inspected directly:
+
+| Repository | Pipeline | Status |
+|---|---|---|
+| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml) | PSScriptAnalyzer, 33 Pester unit tests, a 410-check offline design validation, and a screenshot reference check — on Windows PowerShell 5.1 | [![CI](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml/badge.svg)](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml) |
+| [python-projects](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml) | pytest on Python 3.11 and 3.13, plus an end-to-end CLI run against sample data | [![CI](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml) |
+
+Two further pipelines run in private product repositories, so they are not publicly
+viewable: linting, test suites (63 tests on the flagship Next.js app, 21 on
+webhook-security-critical paths, 8 on auth primitives) and build verification.
+`norshelinc-portal` — the FastAPI backend behind norshelinc.ca — enforces a hard deploy
+gate: the deploy job is dependency-blocked on a verify job covering linting, auth test
+coverage, and an app-startup check. Nothing ships there unless every check passes.
 
 ---
 
@@ -117,7 +124,7 @@ app-startup check. Nothing ships there unless every check passes.
 | Multi-provider LLM API mastery | In progress | `llm-toolkit` |
 | Prompt engineering as system design | Applied | Vortex FX, AI Receptionist |
 | RAG architecture and retrieval | Shipped | Vortex FX |
-| CI/CD and deployment gates | Shipped | 2 active repos |
+| CI/CD and deployment gates | Shipped | 4 repos (2 public) |
 | Agent orchestration (LangGraph/MCP) | In progress | `business-ops-agent` |
 | Evaluation and observability | In progress | Eval harness, RAGAS |
 
