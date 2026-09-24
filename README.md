@@ -22,12 +22,12 @@ administration; onboarding and offboarding.
 First point of contact for escalated hardware and M365 incidents across warehouse
 operations. Resolved 95% of escalations independently; cut operational downtime 40%.
 
-**Technical Support Specialist / Help Desk Technician** — Transmission Company of Nigeria, Abuja, Nigeria (Jul 2020 – Feb 2023)
-Tier 1–2 support to 50+ staff; held the ServiceNow queue at 98% SLA adherence. Built
+**Technical Support Specialist / Help Desk Technician** — Transmission Company of Nigeria, Abuja, Nigeria (Dec 2021 – Feb 2023)
+Tier 1–2 support to 30+ staff; held the ServiceNow queue at 98% SLA adherence. Built
 the first version of the onboarding automation reused in every role since.
 
 **Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence
-**Education:** Post-Degree Diploma, Network and Systems Administration / Network Security — University of Winnipeg
+**Education:** Post-Degree Diploma, Network Security and Systems Administration — University of Winnipeg
 
 ---
 
