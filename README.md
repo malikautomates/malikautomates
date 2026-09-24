@@ -74,7 +74,7 @@ check) passes.
 
 | Repository | Summary |
 |---|---|
-| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller — 12 OUs, AGDLP groups, 15 accounts, permissioned shares — surviving two restarts with no stored credential; a second command onboards a new starter across Active Directory and Microsoft 365. Seven labs from bare VM to first sign-in, with CI on every push. |
+| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller; a second onboards users across AD and Microsoft 365 via Graph. 290-check on-server validator, 33 Pester tests, CI on every push, seven documented labs. |
 | [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite run in CI and a README walkthrough built from real, regenerable screenshots. Currently: a rule-based helpdesk ticket triage CLI. |
 | [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab) | A Microsoft 365 tenant administered end to end across 13 labs: identity and licensing, least-privilege delegation with PIM, Conditional Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk runbook resolving a real account-lockout case. |
 
