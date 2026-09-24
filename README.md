@@ -22,12 +22,12 @@ administration; onboarding and offboarding.
 First point of contact for escalated hardware and M365 incidents across warehouse
 operations. Resolved 95% of escalations independently; cut operational downtime 40%.
 
-**Technical Support Specialist / Help Desk Technician** — Transmission Company of Nigeria, Abuja, Nigeria (Dec 2021 – Feb 2023)
-Tier 1–2 support to 30+ staff; held the ServiceNow queue at 98% SLA adherence. Built
-the first version of the onboarding automation reused in every role since.
+**IT Support Specialist** — Transmission Company of Nigeria, Abuja, Nigeria (Dec 2021 – Feb 2023)
+Tier 1–2 support to 30+ staff; held the ServiceNow queue at 98% SLA adherence. Wrote
+the PowerShell onboarding script that later became the automated-ad-deployment-powershell project.
 
 **Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence
-**Education:** Post-Degree Diploma, Network Security and Systems Administration — University of Winnipeg
+**Education:** Post-Degree Diploma in Network Security and System Administration — University of Winnipeg (PACE), delivered jointly with MITT
 
 ---
 
@@ -49,9 +49,14 @@ slow or failed lookup degrades the answer instead of breaking it.
 
 **PowerShell New-Hire Onboarding Automation**
 Provisions new staff across Active Directory, Microsoft 365 licensing, MFA, and VPN
-access from a single CSV. Manual setup time of 60+ minutes reduced to under 5, with
-zero configuration drift. Built first at Transmission Company of Nigeria; reused at
-every role since.
+access. Manual setup time of 60+ minutes reduced to under 5, with zero configuration
+drift. Built first at Transmission Company of Nigeria; recently rebuilt and tested end to
+end on a fresh Windows Server 2022 build (see automated-ad-deployment-powershell below).
+
+**On-Premises LLM with RAG Knowledge Base** — Ollama · LM Studio
+Running in production for a client whose data cannot leave their premises. A locally
+hosted LLM answers employee questions on internal policies and customer questions on
+products and support through a RAG knowledge base, with no per-token cloud API costs.
 
 **AI Receptionist** — Vortex AI SaaS
 Inbound calls and SMS routed through Vapi's voice-AI platform and Twilio, behind a
@@ -75,7 +80,8 @@ check) passes.
 | Repository | Summary |
 |---|---|
 | [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller; a second onboards users across AD and Microsoft 365 via Graph. 290-check on-server validator, 33 Pester tests, CI on every push, seven documented labs. |
-| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite run in CI and a README walkthrough built from real, regenerable screenshots. Currently: a rule-based helpdesk ticket triage CLI. |
+| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite and a README walkthrough built from real, regenerable screenshots. Complete: a rule-based helpdesk ticket triage CLI. In progress: an M365 user lifecycle tool built on Microsoft Graph (app-only auth, a dry-run mode that needs zero credentials). |
+| [windows-server-2025-ad-lab](https://github.com/malikautomates/windows-server-2025-ad-lab) | *(In progress)* A Windows Server 2025 Active Directory lab across 13 modules — domain controller deployment, OU design and delegation, Group Policy, DHCP/DNS administration, bulk provisioning, and a helpdesk ticket runbook — each with design rationale and verification evidence. |
 | [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab) | A Microsoft 365 tenant administered end to end across 13 labs: identity and licensing, least-privilege delegation with PIM, Conditional Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk runbook resolving a real account-lockout case. |
 
 Each repository is written as operational documentation rather than a tutorial: the
@@ -89,7 +95,7 @@ named directly rather than smoothed over.
 
 | Category | Tools |
 |---|---|
-| Agents & Orchestration | n8n, Vapi voice agents, Claude Agent SDK, LangGraph *(learning)* |
+| Agents & Orchestration | n8n, Vapi and Retell voice agents, Claude Agent SDK, LangGraph *(learning)* |
 | LLMs & RAG | Anthropic Claude, OpenAI APIs, pgvector/Supabase similarity search, prompt engineering |
 | IT & Identity | Microsoft 365, Entra ID/Azure AD, Active Directory, Group Policy, MFA, Windows Server 2016–2025, Linux administration, ServiceNow, Jira |
 | Scripting & Automation | PowerShell, Python, Bash, REST APIs, webhooks |
@@ -101,19 +107,12 @@ named directly rather than smoothed over.
 
 ## Engineering Practices
 
-CI runs on every push and PR. Two pipelines are public and can be inspected directly:
-
-| Repository | Pipeline | Status |
-|---|---|---|
-| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml) | PSScriptAnalyzer, 33 Pester unit tests, a 410-check offline design validation, and a screenshot reference check — on Windows PowerShell 5.1 | [![CI](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml/badge.svg)](https://github.com/malikautomates/automated-ad-deployment-powershell/actions/workflows/ci.yml) |
-| [python-projects](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml) | pytest on Python 3.11 and 3.13, plus an end-to-end CLI run against sample data | [![CI](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/malikautomates/python-projects/actions/workflows/ci.yml) |
-
-Two further pipelines run in private product repositories, so they are not publicly
-viewable: linting, test suites (63 tests on the flagship Next.js app, 21 on
-webhook-security-critical paths, 8 on auth primitives) and build verification.
-`norshelinc-portal` — the FastAPI backend behind norshelinc.ca — enforces a hard deploy
-gate: the deploy job is dependency-blocked on a verify job covering linting, auth test
-coverage, and an app-startup check. Nothing ships there unless every check passes.
+CI/CD runs on every push and PR across two active repositories: linting, test suites
+(63 tests on the flagship Next.js app, 21 on webhook-security-critical paths, 8 on
+auth primitives), and build verification. `norshelinc-portal` — the FastAPI backend
+behind norshelinc.ca — enforces a hard deploy gate: the deploy job is
+dependency-blocked on a verify job covering linting, auth test coverage, and an
+app-startup check. Nothing ships there unless every check passes.
 
 ---
 
@@ -121,18 +120,18 @@ coverage, and an app-startup check. Nothing ships there unless every check passe
 
 | Focus | Status | Where |
 |---|---|---|
-| Multi-provider LLM API mastery | In progress | Vortex FX, AI Receptionist (Claude, OpenAI, ElevenLabs) |
+| Multi-provider LLM API mastery | In progress | `llm-toolkit` |
 | Prompt engineering as system design | Applied | Vortex FX, AI Receptionist |
 | RAG architecture and retrieval | Shipped | Vortex FX |
-| CI/CD and deployment gates | Shipped | 4 repos (2 public) |
-| Agent orchestration (LangGraph/MCP) | In progress | Local prototypes, not yet published |
+| CI/CD and deployment gates | Shipped | 2 active repos |
+| Agent orchestration (LangGraph/MCP) | In progress | `business-ops-agent` |
 | Evaluation and observability | In progress | Eval harness, RAGAS |
 
 ---
 
 ## Certifications
 
-Cisco CCNA · ITIL Foundation · CompTIA Security+ *(in progress)*
+Cisco CCNA · ITIL Foundation
 Anthropic: Claude Code in Action · Building with the Claude API · Claude with Google
 Cloud's Vertex AI · AI Fluency: Framework and Foundations · Claude 101
 
