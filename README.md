@@ -1,93 +1,86 @@
 # Muhammed Abdulmalik (Malik)
 
-**AI Automation Engineer · IT Support Specialist**
+**IT Support Specialist · AI Automation Engineer**
 
 Winnipeg, Manitoba, Canada
 [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com) · [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267) · [Instagram](https://instagram.com/malikautomates_)
 
-I build production agentic AI systems — voice, chat, and workflow automation — that
-replace manual business processes end to end. That instinct comes from three-plus
-years on the other side of the ticket queue: as the person who fixed things when
-they broke, then automated the fix so it didn't happen again.
+I've spent 5+ years on the support side of IT: imaging machines, fixing hardware where
+it fails, managing accounts and MFA, and working ticket queues against SLA. The habit
+that came out of it is simple. When the same problem keeps coming back, I automate the
+fix. That's how I ended up building production AI systems (voice, chat, and workflow
+automation) alongside the support work.
+
+**Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence
 
 ---
 
 ## Experience
 
-**IT Support Specialist** — Norshel Incorporated, Winnipeg, MB (Mar 2025 – Present)
-Tier 1 support across Windows 10/11 and Microsoft 365; M365 user, mailbox, and MFA
-administration; onboarding and offboarding.
+**IT Support Specialist**, Norshel Incorporated, Winnipeg, MB (Mar 2025 – Present)
+Tier 1 support across Windows 10/11, Microsoft 365, printers, and meeting room AV;
+M365 account, mailbox, MFA, and license administration; onboarding and offboarding;
+hardware inventory, warranty repairs, and ISP escalation. Built the voice/text-to-ticket
+automation below.
 
-**Technical Support Specialist (Part-Time)** — Western Drug Distribution Company, Winnipeg, MB (Aug 2023 – Feb 2025)
+**Technical Support (Part-Time)**, Western Drug Distribution Company, Winnipeg, MB (Aug 2023 – Feb 2025)
 First point of contact for escalated hardware and M365 incidents across warehouse
-operations. Resolved 95% of escalations independently; cut operational downtime 40%.
+devices. Resolved 95% of escalations independently and cut operational downtime 40%.
 
-**IT Support Specialist** — Transmission Company of Nigeria, Abuja, Nigeria (Dec 2021 – Feb 2023)
-Tier 1–2 support to 30+ staff; held the ServiceNow queue at 98% SLA adherence. Wrote
-the PowerShell onboarding script that later became the automated-ad-deployment-powershell project.
+**Technical Support Specialist and Help Desk Technician**, Transmission Company of Nigeria, Abuja (Jul 2020 – Feb 2023)
+Tier 1–2 support to 30+ staff across multiple sites. Held the ServiceNow queue at 98%
+SLA adherence, imaged and deployed Windows and macOS workstations, managed endpoints in
+Microsoft Intune, and wrote the PowerShell onboarding script that later became
+[automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell).
 
-**Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence
-**Education:** Post-Degree Diploma in Network Security and System Administration — University of Winnipeg (PACE), delivered jointly with MITT
-
----
-
-## Selected Production Work
-
-**Voice/Text-to-Ticket Automation** — n8n · OpenAI Whisper · Anthropic Claude · Jira
-Running in production at Norshel Incorporated. A support request submitted by voice
-or text is transcribed, classified, and filed as a fully detailed Jira ticket end to
-end in under 60 seconds — down from a 10–15 minute manual intake.
-
-**RAG Pipeline** — Vortex FX
-Queries are embedded (OpenAI `text-embedding-3-small`), matched against a ~6,200-chunk
-trading-literature corpus in a Supabase/pgvector store via a custom Postgres
-similarity function (HNSW-indexed, cosine distance, top-5 above threshold), and
-injected into the system prompt for Claude Sonnet 4.6. Retrieval runs inside a
-`Promise.allSettled` alongside five other live context sources (real-time OANDA
-pricing, open-signal P&L, win-rate stats, economic calendar, session history), so a
-slow or failed lookup degrades the answer instead of breaking it.
-
-**PowerShell New-Hire Onboarding Automation**
-Provisions new staff across Active Directory, Microsoft 365 licensing, MFA, and VPN
-access. Manual setup time of 60+ minutes reduced to under 5, with zero configuration
-drift. Built first at Transmission Company of Nigeria; recently rebuilt and tested end to
-end on a fresh Windows Server 2022 build (see automated-ad-deployment-powershell below).
-
-**On-Premises LLM with RAG Knowledge Base** — Ollama · LM Studio
-Running in production for a client whose data cannot leave their premises. A locally
-hosted LLM answers employee questions on internal policies and customer questions on
-products and support through a RAG knowledge base, with no per-token cloud API costs.
-
-**AI Receptionist** — Vortex AI SaaS
-Inbound calls and SMS routed through Vapi's voice-AI platform and Twilio, behind a
-webhook security layer that verifies every inbound event (Vapi static-secret, Twilio
-HMAC-SHA1) before it reaches the app. A companion n8n workflow handles outbound
-follow-up: triggers on missed calls and a schedule, pulls caller context from a
-Google Sheets CRM, and places the call through the ElevenLabs API.
-
-**norshelinc.ca**
-End-to-end ownership of the organization's public site — domain, DNS, hosting,
-content, and backend. The backend (`norshelinc-portal`) is a Python/FastAPI service
-with JWT-based authentication (bcrypt hashing, token verification, rejection of
-tampered/expired tokens), deployed to Fly.io behind a hard CI/CD gate: the deploy job
-does not run unless the full verify suite (linting, auth test coverage, app-startup
-check) passes.
+**Education:** Post-Degree Diploma in Network Security, University of Winnipeg (PACE), delivered jointly with MITT ·
+B.Sc. Electrical and Electronics Engineering, Federal University of Technology, Minna
 
 ---
 
 ## Portfolio Repositories
 
-| Repository | Summary |
-|---|---|
-| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller; a second onboards users across AD and Microsoft 365 via Graph. 290-check on-server validator, 33 Pester tests, CI on every push, seven documented labs. |
-| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python automation tools, each with a pytest suite and a README walkthrough built from real, regenerable screenshots. Complete: a rule-based helpdesk ticket triage CLI. In progress: an M365 user lifecycle tool built on Microsoft Graph (app-only auth, a dry-run mode that needs zero credentials). |
-| [windows-server-2025-ad-lab](https://github.com/malikautomates/windows-server-2025-ad-lab) | *(In progress)* A Windows Server 2025 Active Directory lab across 13 modules — domain controller deployment, OU design and delegation, Group Policy, DHCP/DNS administration, bulk provisioning, and a helpdesk ticket runbook — each with design rationale and verification evidence. |
-| [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab) | A Microsoft 365 tenant administered end to end across 13 labs: identity and licensing, least-privilege delegation with PIM, Conditional Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk runbook resolving a real account-lockout case. |
+| Repository | Summary | Status |
+|---|---|---|
+| [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell) | One PowerShell command turns a bare Windows Server 2022 VM into a hardened, self-validating domain controller (12 OUs, 23 AGDLP groups, 11 permissioned shares, 290-check validator). A second onboards a new hire across Active Directory and Microsoft 365 via Microsoft Graph. 33 Pester tests and PSScriptAnalyzer in CI on every push; seven documented labs. | Complete |
+| [microsoft-365-administration-lab](https://github.com/malikautomates/microsoft-365-administration-lab) | A Microsoft 365 tenant administered end to end across 13 labs: identity and licensing, least-privilege delegation with PIM, Conditional Access, Exchange Online, Teams, SharePoint, DLP, Intune, and a service desk runbook resolving a real account-lockout case. | Complete |
+| [python-projects](https://github.com/malikautomates/python-projects) | Standalone Python tools, each with a pytest suite and screenshots regenerated from real runs. A rule-based helpdesk ticket triage CLI is complete; an M365 user lifecycle tool on Microsoft Graph is in progress. | In progress |
+| [windows-server-2025-ad-lab](https://github.com/malikautomates/windows-server-2025-ad-lab) | A Windows Server 2025 Active Directory lab across 13 modules: DC deployment, OU design and delegation, Group Policy, DHCP/DNS, bulk provisioning, and a service desk fault runbook. | In progress |
 
-Each repository is written as operational documentation rather than a tutorial: the
-design decision behind a choice, a real test suite or regenerated verification
-evidence, and — where something didn't work cleanly the first time — the limitation,
-named directly rather than smoothed over.
+Every repository is written as operational documentation rather than a tutorial: the
+reason behind each design choice, real verification evidence, and, where something
+didn't work cleanly the first time, the fault and its fix, named directly.
+
+---
+
+## Selected Production Work
+
+**Voice/Text-to-Ticket Automation** · n8n · OpenAI Whisper · Anthropic Claude · Jira
+Running at Norshel Incorporated. A support request submitted by voice or text is
+transcribed, classified, and filed as a complete Jira ticket in under 60 seconds, down
+from a 10–15 minute manual intake.
+
+**On-Premises LLM with RAG Knowledge Base** · Ollama · LM Studio
+Running for a client whose data can't leave the building. A locally hosted LLM answers
+staff questions on internal policies and customer questions on products and support,
+with no per-token cloud costs.
+
+**AI Receptionist** · Vortex AI · Vapi · Retell · Twilio · ElevenLabs · n8n
+Inbound calls and SMS are routed through a voice agent behind a webhook security layer
+that verifies every event (Vapi static secret, Twilio HMAC-SHA1) before it reaches the
+app. An n8n workflow handles follow-up: it triggers on missed calls, pulls caller
+context from a CRM, and places the call.
+
+**RAG Pipeline** · Vortex FX · Supabase/pgvector · Anthropic Claude
+Queries are embedded and matched against a ~6,200-chunk corpus through an HNSW-indexed
+pgvector store and a custom Postgres similarity function. Retrieval runs alongside five
+other live context sources in parallel, so one slow lookup degrades the answer instead
+of breaking it.
+
+**norshelinc.ca** · React · Python/FastAPI · Fly.io
+End-to-end ownership: domain, DNS, React frontend, and a FastAPI backend with JWT auth
+(bcrypt hashing, rejection of tampered or expired tokens). The deploy job is blocked
+unless linting, auth tests, and an app-startup check all pass.
 
 ---
 
@@ -95,45 +88,19 @@ named directly rather than smoothed over.
 
 | Category | Tools |
 |---|---|
-| Agents & Orchestration | n8n, Vapi and Retell voice agents, Claude Agent SDK, LangGraph *(learning)* |
-| LLMs & RAG | Anthropic Claude, OpenAI APIs, pgvector/Supabase similarity search, prompt engineering |
-| IT & Identity | Microsoft 365, Entra ID/Azure AD, Active Directory, Group Policy, MFA, Windows Server 2016–2025, Linux administration, ServiceNow, Jira |
-| Scripting & Automation | PowerShell, Python, Bash, REST APIs, webhooks |
-| CI/CD & Deployment | GitHub Actions, Vercel, Fly.io, Docker |
+| IT & Identity | Microsoft 365, Entra ID, Active Directory, Group Policy, Intune, MFA, Conditional Access, Windows Server 2016–2025, macOS, Linux |
+| Service Desk | ServiceNow, Jira, Jira Service Management, ITIL, knowledge base and runbook writing |
 | Networking & Security | TCP/IP, DNS, DHCP, VLAN, VPN, firewalls, Cisco switches/routers |
-| Other | Git/GitHub, HTML/CSS, Model Context Protocol (MCP) |
-
----
-
-## Engineering Practices
-
-CI/CD runs on every push and PR across two active repositories: linting, test suites
-(63 tests on the flagship Next.js app, 21 on webhook-security-critical paths, 8 on
-auth primitives), and build verification. `norshelinc-portal` — the FastAPI backend
-behind norshelinc.ca — enforces a hard deploy gate: the deploy job is
-dependency-blocked on a verify job covering linting, auth test coverage, and an
-app-startup check. Nothing ships there unless every check passes.
-
----
-
-## Currently Learning
-
-| Focus | Status | Where |
-|---|---|---|
-| Multi-provider LLM API mastery | In progress | `llm-toolkit` |
-| Prompt engineering as system design | Applied | Vortex FX, AI Receptionist |
-| RAG architecture and retrieval | Shipped | Vortex FX |
-| CI/CD and deployment gates | Shipped | 2 active repos |
-| Agent orchestration (LangGraph/MCP) | In progress | `business-ops-agent` |
-| Evaluation and observability | In progress | Eval harness, RAGAS |
+| Scripting | PowerShell, Python, SQL, Bash, JavaScript/TypeScript, REST APIs, webhooks |
+| AI & Automation | n8n, Anthropic Claude, OpenAI APIs, Ollama, RAG (pgvector), Vapi, Retell, Model Context Protocol (MCP), Claude Code |
+| Testing & Deployment | Pester, pytest, GitHub Actions, Docker, Fly.io, Vercel |
 
 ---
 
 ## Certifications
 
 Cisco CCNA · ITIL Foundation
-Anthropic: Claude Code in Action · Building with the Claude API · Claude with Google
-Cloud's Vertex AI · AI Fluency: Framework and Foundations · Claude 101
+Anthropic: Claude Code in Action · Building with the Claude API · Claude with Google Cloud's Vertex AI · AI Fluency: Framework and Foundations · Claude 101
 
 ---
 
