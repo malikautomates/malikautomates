@@ -6,12 +6,12 @@ Winnipeg, Manitoba, Canada
 [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com) · [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267) · [Instagram](https://instagram.com/malikautomates_)
 
 I've spent 5+ years on the support side of IT: imaging machines, fixing hardware where
-it fails, managing accounts and MFA, and working ticket queues against SLA. The habit
-that came out of it is simple. When the same problem keeps coming back, I automate the
-fix. That's how I ended up building production AI systems (voice, chat, and workflow
-automation) alongside the support work.
+it fails, running cable, managing accounts and MFA, and working ticket queues against
+SLA. The habit that came out of it is simple. When the same problem keeps coming back,
+I automate the fix. That's how I ended up building production AI systems (voice, chat,
+and workflow automation) alongside the support work.
 
-**Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence
+**Track record:** 98% user satisfaction · 95% first-contact resolution · 98% SLA adherence · 99.9% network uptime
 
 ---
 
@@ -28,10 +28,27 @@ First point of contact for escalated hardware and M365 incidents across warehous
 devices. Resolved 95% of escalations independently and cut operational downtime 40%.
 
 **Technical Support Specialist and Help Desk Technician**, Transmission Company of Nigeria, Abuja (Jul 2020 – Feb 2023)
-Tier 1–2 support to 30+ staff across multiple sites. Held the ServiceNow queue at 98%
-SLA adherence, imaged and deployed Windows and macOS workstations, managed endpoints in
-Microsoft Intune, and wrote the PowerShell onboarding script that later became
-[automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell).
+
+- **Service desk:** main point of contact for Tier 1–2 support to 30+ staff across
+  multiple sites. Worked the ServiceNow queue by business impact and SLA urgency,
+  holding 98% SLA adherence, 95% first-call resolution, and 98% user satisfaction,
+  and cut the critical backlog by 35%.
+- **Networking:** built and supported LAN/WAN networks for 30+ users across multiple
+  sites on Cisco and Ubiquiti switches, routers, and access points. Configured VLANs,
+  DHCP scopes, and QoS for seamless wireless roaming and smooth VoIP and video, keeping
+  uptime at 99.9%.
+- **Endpoints and hardware:** imaged and deployed Windows and macOS workstations (Disk
+  Utility, Carbon Copy Cloner, AppleScript), managed endpoints in Microsoft Intune, and
+  handled hardware rollouts and on-site repairs, including running cable in tight spaces.
+- **Identity and security:** maintained Active Directory accounts, permissions, password
+  policies, MFA, VPNs, and firewalls, and ran system backups and recoveries.
+- **Automation:** wrote PowerShell scripts that automated new-hire onboarding end to end
+  (AD account, groups and permissions, Microsoft 365 licenses, MFA, VPN access, and a
+  welcome email with temporary credentials), cutting setup from over an hour to under 5
+  minutes per user with no configuration drift. That script later became
+  [automated-ad-deployment-powershell](https://github.com/malikautomates/automated-ad-deployment-powershell).
+- **People:** trained non-technical users at every level, handled sensitive information
+  with strict confidentiality, and covered evenings and high-demand periods.
 
 **Education:** Post-Degree Diploma in Network Security, University of Winnipeg (PACE), delivered jointly with MITT ·
 B.Sc. Electrical and Electronics Engineering, Federal University of Technology, Minna
@@ -90,11 +107,12 @@ unless linting, auth tests, and an app-startup check all pass.
 |---|---|
 | IT & Identity | Microsoft 365, Entra ID, Active Directory, Group Policy, Intune, MFA, Conditional Access, Windows Server 2016–2025, macOS, Linux |
 | Service Desk | ServiceNow, Jira, Jira Service Management, ITIL, knowledge base and runbook writing |
-| Networking & Security | TCP/IP, DNS, DHCP, VLAN, VPN, firewalls, Cisco switches/routers |
+| Networking | LAN/WAN, TCP/IP, DNS, DHCP scopes, VLANs, QoS, VPN, firewalls, wireless access points, Cisco and Ubiquiti switches/routers |
+| Endpoints & Hardware | Windows and macOS imaging (Disk Utility, Carbon Copy Cloner, AppleScript), hardware rollouts, on-site repair, cabling, backup and recovery |
 | Scripting | PowerShell, Python, SQL, Bash, JavaScript/TypeScript, REST APIs, webhooks |
 | AI & Automation | n8n, Anthropic Claude, OpenAI APIs, Ollama, RAG (pgvector), Vapi, Retell, Model Context Protocol (MCP), Claude Code |
 | Testing & Deployment | Pester, pytest, GitHub Actions, Docker, Fly.io, Vercel |
-| Soft Skills | Customer service (98% satisfaction), clear communication in plain language, training non-technical users, mentoring newer technicians, prioritizing under SLA pressure, documentation and vendor collaboration |
+| Soft Skills | Customer service, clear communication in plain language, training non-technical users, confidentiality, prioritizing under SLA pressure, flexible scheduling |
 
 ---
 
