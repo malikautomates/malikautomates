@@ -94,6 +94,7 @@ unless linting, auth tests, and an app-startup check all pass.
 | Scripting | PowerShell, Python, SQL, Bash, JavaScript/TypeScript, REST APIs, webhooks |
 | AI & Automation | n8n, Anthropic Claude, OpenAI APIs, Ollama, RAG (pgvector), Vapi, Retell, Model Context Protocol (MCP), Claude Code |
 | Testing & Deployment | Pester, pytest, GitHub Actions, Docker, Fly.io, Vercel |
+| Professional Soft Skills | Customer service, explaining technical issues in plain language, training non-technical users, mentoring newer technicians, clear documentation, vendor collaboration |
 
 ---
 
