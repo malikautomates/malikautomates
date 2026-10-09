@@ -5,7 +5,7 @@
 Winnipeg, Manitoba, Canada
 [m.abdulmaliksani008@gmail.com](mailto:m.abdulmaliksani008@gmail.com) · [LinkedIn](https://www.linkedin.com/in/muhammed-abdulmalik-a84131267) · [Instagram](https://instagram.com/malikautomates_)
 
-I've spent 5+ years on the support side of IT: imaging machines, fixing hardware where
+I've spent 3+ years on the support side of IT: imaging machines, fixing hardware where
 it fails, running cable, managing accounts and MFA, and working ticket queues against
 SLA. The habit that came out of it is simple. When the same problem keeps coming back,
 I automate the fix. That's how I ended up building production AI systems (voice, chat,
@@ -29,11 +29,11 @@ devices. Resolved 95% of escalations independently and cut operational downtime 
 
 **Technical Support Specialist and Help Desk Technician**, Transmission Company of Nigeria, Abuja (Jul 2020 – Feb 2023)
 
-- **Service desk:** main point of contact for Tier 1–2 support to 30+ staff across
+- **Service desk:** main point of contact for Tier 1–2 support to 50+ staff across
   multiple sites. Worked the ServiceNow queue by business impact and SLA urgency,
   holding 98% SLA adherence, 95% first-call resolution, and 98% user satisfaction,
   and cut the critical backlog by 35%.
-- **Networking:** built and supported LAN/WAN networks for 30+ users across multiple
+- **Networking:** built and supported LAN/WAN networks for 50+ users across multiple
   sites on Cisco and Ubiquiti switches, routers, and access points. Configured VLANs,
   DHCP scopes, and QoS for seamless wireless roaming and smooth VoIP and video, keeping
   uptime at 99.9%.
